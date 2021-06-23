@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Authentication</title>
-    </head>
-    <body>
-        <div class="form">
-            <form class="personal-info">
-                <h1>Authentication</h1>
-                <p>Please enter the code sent to +234816400000</p>
-                <div class="userInput">
-                    <input type="text" id="1st" name="input"  maxlenght="1" onkeyup="clickEvent (this,'sec')">
-                    <input type="text" id="sec" name="input" maxlenght="1" onkeyup="clickEvent (this,'third')">
-                    <input type="text" id="third" name="input" maxlenght="1" onkeyup="clickEvent (this,'fourth')">
-                    <input type="text" id="fourth" name="input" maxlenght="1" onkeyup="clickEvent (this,'fifth')">
-                    <input type="text" id="fifth" name="input"  maxlenght="1" onkeyup="clickEvent (this,'sixth')">
-                    <input type="text" id="sixth" name="input" maxlenght="1">
-                </div>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <p id="resend"><img src="resend.jpg">Resend code in 30s</p>
+    <title>Authentication</title>
+</head>
 
-                <button>Continue</button>
-            </form>
-        </div>
-        <script type="text/javascript">
-        function clickEvent(first,last){
-            if(first.value.length){ 
-                document.getElementById(last). focus();
+<body>
+    <div class="form">
+        <form class="personal-info">
+            <h1>Authentication</h1>
+            <p>Please enter the code sent to +234816400000</p>
+            <div class="userInput">
+                <input class="single-input" type="text" id="1st" name="input" maxlenght="1"
+                    onkeyup="clickEvent (this,'sec')">
+                <input class="single-input" type="text" id="sec" name="input" maxlenght="1"
+                    onkeyup="clickEvent (this,'third')">
+                <input class="single-input" type="text" id="third" name="input" maxlenght="1"
+                    onkeyup="clickEvent (this,'fourth')">
+                <input class="single-input" type="text" id="fourth" name="input" maxlenght="1"
+                    onkeyup="clickEvent (this,'fifth')">
+                <input class="single-input" type="text" id="fifth" name="input" maxlenght="1"
+                    onkeyup="clickEvent (this,'sixth')">
+                <input class="single-input" type="text" id="sixth" name="input" maxlenght="1">
+            </div>
+
+            <div id="resend"><img src="resend.jpg"><span>Resend code in 30s</span></div>
+
+            <button>Confirm</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function clickEvent(first, last) {
+            if (first.value.length) {
+                document.getElementById(last).focus();
             }
-            }
-        </script>
-  
-    </body>
+        }
+    </script>
+
+</body>
+
 </html>
